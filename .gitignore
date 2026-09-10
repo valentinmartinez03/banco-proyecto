@@ -1,0 +1,67 @@
+# =========================
+# Entornos Virtuales
+# =========================
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# Archivos de caché de Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# =========================
+# Django
+# =========================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# =========================
+# Archivos subidos por usuarios (Media) y Estáticos recolectados
+# =========================
+media/
+staticfiles/
+
+# =========================
+# Variables de Entorno / Secretos
+# =========================
+.env
+.env.local
+.env.development
+.env.production
+.env.*
+
+# =========================
+# Herramientas de Testing y Cobertura
+# =========================
+.tox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# =========================
+# Archivos de SO y Editores (IDE)
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

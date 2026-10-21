@@ -5,6 +5,7 @@ from apps.accounts.api import (
     me_router,
     public_router as auth_router,
 )
+from apps.catalogs.api import public_router as catalogs_router
 
 
 api = NinjaAPI(
@@ -38,3 +39,4 @@ def healthcheck(request):
 api.add_router("/auth", auth_router)
 api.add_router("/auth", me_router)
 api.add_router("/admin", users_admin_router)
+api.add_router("", catalogs_router)

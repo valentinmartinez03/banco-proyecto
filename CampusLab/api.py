@@ -17,6 +17,11 @@ from apps.institutions.api import (
     public_router as institutions_router,
     teacher_router as institutions_teacher_router,
 )
+from apps.projects.api import (
+    institution_router as projects_institution_router,
+    public_router as catalog_router,
+    teacher_router as projects_teacher_router,
+)
 
 
 api = NinjaAPI(
@@ -51,10 +56,13 @@ api.add_router("/auth", auth_router)
 api.add_router("/auth", me_router)
 api.add_router("/teacher", institutions_teacher_router)
 api.add_router("/teacher", academics_teacher_router)
+api.add_router("/teacher", projects_teacher_router)
 api.add_router("/institution", institutions_institution_router)
 api.add_router("/institution", academics_institution_router)
+api.add_router("/institution", projects_institution_router)
 api.add_router("/admin", users_admin_router)
 api.add_router("/admin", institutions_admin_router)
 api.add_router("", institutions_router)
 api.add_router("", careers_router)
 api.add_router("", catalogs_router)
+api.add_router("", catalog_router)
